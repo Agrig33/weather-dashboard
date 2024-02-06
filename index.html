@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
-  <link rel="stylesheet" href="./assets/css/style.css"/>
-  
-  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
-  <div class="widget">
-      <fieldset>
-        <legend>Select a Location: </legend>
-        <label for="radio-1">New York</label>
-        <input type="radio" name="radio-1" id="radio-1">
-        <label for="radio-2">Los Angeles</label>
-        <input type="radio" name="radio-1" id="radio-2">
-        <label for="radio-3">Chicago</label>
-        <input type="radio" name="radio-1" id="radio-3">
-        <label for="radio-4">Atlanta</label>
-        <input type="radio" name="radio-1" id="radio-4">
-        <label for="radio-5">Houston</label>
-        <input type="radio" name="radio-1" id="radio-5">
-        <label for="radio-6">Phoenix</label>
-        <input type="radio" name="radio-1" id="radio-6">
-        <label for="radio-7">Denver</label>
-        <input type="radio" name="radio-1" id="radio-7">
-      </fieldset>
-
-  <header class="container-fluid text-center text-white bg-dark p-2">
-    <h1>Weather Dashboard</h1>
-  </header>
-
+<header class="container-fluid h1 text-center text-white bg-dark p-2">
+  <h1>Weather Dashboard</h1>
+</header>
   <div class="container">
-    <div class="row">
+   <div class="row">
 
-      <div class="col-lg-3 bg-light">
-        <h5 class="mt-1">Search for a City:</h5>
-        <div class="form-inline form-group">
-          <input class="form-control" type="text" placeholder ="Please enter City" aria-label="Search" id="search-value" />
-          <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i> </button>
-        </div>
+<!--Navigation-->
+  <div class="h2 pt-3 bg-light">Search for a City:</div>
+    <nav class="col-12 col-md-4">
+      <div class="form form-group">
+        <form class="search-form d-flex flex-column" role="search">
+        
+          <input class="form-control" type="search" placeholder ="Please enter City" aria-label="Search" id="search-value"/>
+          <button class="btn btn-primary" type="submit" id="search-button"> <i class="fa fa-search"></i> </button>
+        </form>
+        <div id="search-history-container"></div>
+  </div>
+    </nav>
+        
+<!--Main weather info display on homepage-->
+  <div class="col-12 col-md-6 mb-3 border">
+    <div class="current-weather d-flex flex-column p-6 h-100 align-items-start justify-content-center">
+
+<!--Search History-->
 
         <ul class="list-group history"></ul>
       </div>
@@ -58,8 +50,6 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 
