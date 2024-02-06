@@ -131,3 +131,11 @@ $(document).ready(function() {
       makeRow(history[i]);
     }
   });
+
+  <script>
+  $( function() {
+    $( "input" ).checkboxradio({
+      icon: false
+    });
+  } );
+  </script>
